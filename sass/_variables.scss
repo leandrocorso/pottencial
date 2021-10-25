@@ -1,0 +1,42 @@
+// Solid
+
+$primary: #F26522;
+$darker: #070606;
+$dark: #3C3C3C;
+$medium: #707070;
+$lighter: #F2F2F2;
+$black: #000000;
+$white: #ffffff;
+
+// Transparencies
+
+$primary30: rgba(242, 101, 34, .3);
+$medium20: rgba(112, 112, 112, .2);
+$transparency: rgba(106, 106, 129, 0.19);
+$lightTransparency: rgba(0, 0, 0, 0.16);
+$lighterTransparency: rgba(0, 0, 0, 0.08);
+$darkTransparency: rgba(7, 7, 6, 0.6);
+
+// Shadows
+
+$shadow: 0 3px 6px $transparency;
+$lightShadow: 0, 6px, 12px $lightTransparency;
+$lighterShadow: 0, 3px, 16px $lighterTransparency;
+
+// Default font 
+
+$primaryFontFamily: 'Open Sans', sans-serif;
+$secondaryFontFamily: 'Poppins', sans-serif;
+
+$defaultFontFamily: $primaryFontFamily;
+$defaultFontSize: 13px;
+$defaultFontWeight: 400;
+$defaultFontColor: $darker;
+
+// Heading font
+
+$headingFontFamily: $primaryFontFamily;
+$headingFontWeight: 700;
+
+// Secondary font
+

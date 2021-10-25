@@ -1,0 +1,104 @@
+.main-navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .logo {
+        margin-right: 45px;
+    }
+
+    .menu {
+        display: inline-flex;
+        align-items: center;
+
+        li {
+            display: inline-block;
+            list-style: none;
+            background-repeat: no-repeat;
+            margin-right: 45px;
+            padding-top: 0;
+            padding-right: 0;
+            margin-left: 0;
+            
+            a{
+                position: relative;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.6px;
+                color: $white;
+                text-decoration: none;    
+                padding-right: 17px;          
+            }
+
+            &:hover {
+                ul {
+                    opacity: 1;
+                }
+            }
+
+            &.expanded a, &.collapsed{
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 4px;
+                    width: 12px;
+                    height: 8px;
+                    @include arrow-down();
+                    filter: invert(1);
+                }
+            }
+
+            ul {
+                display: block;
+                position: absolute;
+                background-color: $white;
+                border-radius: 9px;
+                opacity: 0;
+                transition: opacity .3s;
+                overflow: hidden;
+
+                li {
+                    display: block;
+                    margin-right: 0;
+                    
+                    a {
+                        display: block;
+                        font-weight: 400;
+                        color: $defaultFontColor;
+                        padding: 10px;
+                        transition: opacity .3s ease-in-out;
+                        background-image: none;
+
+                        &:hover {
+                            background-color: $primary30;
+                        }
+
+                        &::before {
+                            display: none;
+                        }
+
+                        &:after {
+                            content: '';
+                            width: 90%;
+                            height: 1px;
+                            background-color: $medium20;
+                            position: absolute;
+                            left: 5%;
+                            bottom: 0;
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

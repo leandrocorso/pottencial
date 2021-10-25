@@ -10,6 +10,10 @@
   color: #070606;
 }
 
+body {
+  background: #F26522;
+}
+
 body .app {
   max-width: 1368px;
   margin: 0 auto;

@@ -15,10 +15,6 @@
 #page-title {
     background-color: unset;
     border: none;
-
-    .content-wrap > .container {
-        padding: 0 30px;
-    }
 }
 
 #top-search, #breadcrumb {
@@ -94,6 +90,11 @@
     display: none;
 }
 
-#content .content-wrap > .container {
-    min-height: 500px;
+#content .content-wrap {
+    padding: 0;
+    
+    > .container {
+        min-height: 500px;
+        padding: 0 30px;
+    }
 }

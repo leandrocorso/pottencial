@@ -8,13 +8,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-family: $secondaryFontFamily;
-    font-size: 70px;
-    color: $white;
+    font-size: 36px;
 }
 
 h2 {
-    
     font-size: 30px;
 
     &.page-title {
@@ -54,5 +51,20 @@ p {
     .intro {
         text-align: center;
         opacity: 0.79;
+    }
+
+    &.bullet {
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: $dark;
+            border-radius: 5px;
+            left: -5px;
+            position: relative;
+        }
     }
 }

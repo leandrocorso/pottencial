@@ -1,0 +1,92 @@
+#content {
+    padding: 57px 0 0 0;
+    background-image: url(https://developers.pottencial.com.br/api-portal/sites/default/files/content-background.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto 100%;
+    background-attachment: fixed;
+}
+
+.stretched #page-title {
+    padding: 0;
+    box-shadow: none;
+}
+
+#page-title {
+    background-color: unset;
+    border: none;
+
+    .content-wrap > .container {
+        padding: 0 30px;
+    }
+}
+
+#top-search, #breadcrumb {
+    display: none;
+}
+
+
+.text-muted {
+    color: $defaultFontColor !important;
+    font-size: 15px;
+}
+
+.m-t-10 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#content, .page {
+    #page-title, &__header {
+        text-align: center;
+        margin-bottom: 56px;
+
+        h1, h2 {
+            font-size: 43px;
+            line-height: 76px;
+            letter-spacing: 0.43px;
+            color: $defaultFontColor;
+
+            &:after {
+                content:'';
+                display: flex;
+                width: 227px;
+                height: 3px;
+                background-color: $primary;
+                margin: 0 auto;
+            }
+        }
+
+        p {
+            margin: 0 auto;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    .subheading {
+        text-align: center;
+        width: 620px;
+        margin: 0 auto 56px auto;
+    }
+
+    &__content {
+        background: none;
+        margin-bottom: 87px;
+    }
+}
+
+#content #page-title {
+    margin-bottom: 0 !important;
+}
+
+#content .form-type-item:last-child {
+    display: none;
+}
+
+#content .content-wrap > .container {
+    min-height: 500px;
+}

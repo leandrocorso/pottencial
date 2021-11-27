@@ -1,0 +1,110 @@
+#header {
+    > .container {
+        display: inline-flex;
+        align-items: center;
+        padding: 28px 37px;
+        background-color: $darker;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: unset;
+        max-width: 100%;      
+    }
+
+    #logo {
+        position: unset;
+        float: unset;
+        height: unset;
+        max-width: unset;
+        margin-right: 45px;
+        width: fit-content;
+    }
+    
+    #primary-menu {
+        position: unset;
+        float: unset;
+        max-width: unset;
+        height: unset;
+
+        li:hover a {
+            text-decoration: none;
+        }
+
+        ul li {
+            height: unset;
+            float: unset;
+            background: none;
+            display: inline-flex;
+            margin-right: 45px;
+
+            &.sub-menu a.parent div {
+                background: none;
+
+                &:after {
+                    content: '';
+                    width: 11px;
+                    height: 11px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    @include arrow-down(11px);
+                }
+            }
+
+            a {
+                border-top: unset;
+                padding: unset;
+                height: unset;
+                line-height: normal;
+                text-shadow: none;
+                text-transform: unset;
+                
+                div {
+                    color: $white;
+                }
+            }
+        }
+
+        ul ul {
+            top: 20px;
+            width: fit-content;
+            border-radius: 9px;
+            background-color: $white;
+
+            li {
+                display: block;
+                margin-right: 0;
+                margin-top: -1px;
+                padding: 0 5px;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: $primary30;
+
+                    a {
+                        font-weight: unset;
+                    }
+                }
+            }
+
+            a {
+
+                div {
+                    border-bottom: 1px solid $medium20;
+                    color: $defaultFontColor;
+                    white-space: nowrap;
+                    padding: 10px 5px;
+                }
+
+                &:hover {
+                    font-weight: unset;
+                    background: none;
+                }
+            }
+
+            li:last-child a div {
+                border: 0;
+            }
+        }
+    }
+}

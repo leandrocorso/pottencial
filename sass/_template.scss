@@ -1,66 +1,32 @@
 body {
+    background: none;
+}
 
-    .app {
-        max-width: 1368px;
-        margin: 0 auto;
-    }
+.stretched #wrapper {
+    box-shadow: none;
+    max-width: $desktopWidth;
+}
+
+.stretched #header, .stretched .content-wrap {
+    box-shadow: none;
+}
+
+#wrapper {
+    .container {
+        width: $desktopWidth;
     
-    &.front {
-
-        .region {
-
-            &--header {
-                position: relative;
-                height: 652px;
-                padding: 28px 40px;
-                background-image: url(images/home-hero.png);
-                background-repeat: no-repeat;
-                background-position: top center;
-                background-size: cover;
-                margin-bottom: 45px;
-                
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $darkTransparency;
-                    z-index: 0;
-                }
-                
-                .hero {
-                    position: absolute;
-                    z-index: 1;
-                    bottom: 96px;
-
-                    h1, h2 {
-                        color: $white;
-                    }
-
-                    h1 {
-                        margin-bottom: 10px;
-                    }
-                    
-                    h2 {
-                        max-width: 610px;
-                        font-weight: 600;
-                        margin-bottom: 31px;
-                    }
-
-                    .button {
-                        padding-left: 40px;
-                        padding-right: 40px;
-                        border-radius: 26px;
-                        font-size: 16px;
-                        font-family: $defaultFontFamily;
-                        font-weight: 700;
-                    }
-                }
-            }
+        @media (min-width: 1200px) {
+            max-width: $desktopWidth;
         }
     }
 
-    
+    #top-bar {
+        display: none;
+    }
+
 }
+
+@import "header";
+@import "slider";
+@import "content";
+@import "footer";

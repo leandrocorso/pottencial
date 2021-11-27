@@ -1,0 +1,48 @@
+body.page-node-33 {
+
+    @media (min-width: 1200px) {
+        #wrapper .container { max-width: 1358px;
+        }
+    }
+
+    #content {
+        border-left: 40px solid $primary; 
+        background-image: none;
+    }
+
+    .field-name-body .field-item:first-child {
+        max-width: 1046px;
+        margin: 0 auto;
+    }
+            
+    .faq-question {
+        padding: 60px 0 36px 0;
+        border-bottom: 1px solid $transparency;
+
+        &:first-child {
+            padding-top:0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+        
+        a {
+            display: block;
+
+            h4 {
+                color: $defaultFontColor;
+                font-size: 25px;
+                line-height: normal;
+                letter-spacing: 0.25px;
+                padding: 0;
+                max-width: 1000px;
+            }
+            
+        }
+        
+    }
+        
+    
+}

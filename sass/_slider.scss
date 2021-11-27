@@ -1,0 +1,35 @@
+#slider {
+    height: auto;
+    background: none;
+    
+    .page-hero {
+        padding: 0 37px;
+        
+        h1 {
+            font-family: $secondaryFontFamily;
+            font-size: 70px;
+            line-height: 70px;
+            color: $white;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: $white;
+            font-weight: 500;
+            line-height: 41px;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.32px;
+            border-radius: 24px;
+        }
+    }
+}
+
+.stretched #slider {
+    box-shadow: none;
+}

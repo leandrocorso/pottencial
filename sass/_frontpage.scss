@@ -9,53 +9,6 @@ body.front #wrapper {
         }
     }
 
-    #slider {
-        height: 776px;
-        background-image: url(/api-portal/sites/default/files/home-hero.png);
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        @media screen and (max-width: 1000px) {
-            height: 625px;
-        }
-
-        @media screen and (max-width: 700px) {
-            height: 520px;
-        }
-        
-        @media screen and (max-width: 500px) {
-            height: 390px;
-        }
-
-        .region-slider {
-            height: 100%;
-            background: $darkTransparency;
-
-            .block {
-                position: absolute;
-                bottom: 96px;
-
-                @media screen and (max-width: 700px) {
-                    bottom: 40px;
-                }
-                
-                @media screen and (max-width: 400px) {
-                    bottom: 20px;
-                }
-        
-            }
-        }
-
-        h2 {
-            width: 610px;
-
-            @media screen and (max-width: 700px) {
-                width: unset;
-            }
-        }
-    }
-
     #content {
 
         .page {

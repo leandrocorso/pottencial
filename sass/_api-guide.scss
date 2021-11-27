@@ -13,28 +13,6 @@ body.node-type-documentation {
         }
     }
 
-    #slider {
-        height: 776px;
-        background-image: url(/api-portal/sites/default/files/home-hero.png);
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: auto 776px;
-
-        .region-slider {
-            height: 100%;
-            background: $darkTransparency;
-
-            .block {
-                position: absolute;
-                bottom: 96px;
-            }
-        }
-
-        h2 {
-            width: 490px;
-        }
-    }
-
     #content {
         background-image: none;
         background-color: $dark;

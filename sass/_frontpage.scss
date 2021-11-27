@@ -14,7 +14,19 @@ body.front #wrapper {
         background-image: url(/api-portal/sites/default/files/home-hero.png);
         background-position: top center;
         background-repeat: no-repeat;
-        background-size: auto 776px;
+        background-size: cover;
+
+        @media screen and (max-width: 1000px) {
+            height: 625px;
+        }
+
+        @media screen and (max-width: 700px) {
+            height: 520px;
+        }
+        
+        @media screen and (max-width: 500px) {
+            height: 390px;
+        }
 
         .region-slider {
             height: 100%;
@@ -23,11 +35,24 @@ body.front #wrapper {
             .block {
                 position: absolute;
                 bottom: 96px;
+
+                @media screen and (max-width: 700px) {
+                    bottom: 40px;
+                }
+                
+                @media screen and (max-width: 400px) {
+                    bottom: 20px;
+                }
+        
             }
         }
 
         h2 {
             width: 610px;
+
+            @media screen and (max-width: 700px) {
+                width: unset;
+            }
         }
     }
 
@@ -36,12 +61,12 @@ body.front #wrapper {
         .page {
 
             &__header p {
-                width: 620px;
+                max-width: 620px;
             }
         }
 
         .card-documentation .card__content p {
-            width: 290px;
+            max-width: 290px;
         }
     }
 }

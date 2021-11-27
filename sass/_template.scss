@@ -5,6 +5,7 @@ body {
 .stretched #wrapper {
     box-shadow: none;
     max-width: $desktopWidth;
+    width: 100% !important;
 }
 
 .stretched #header, .stretched .content-wrap {
@@ -13,7 +14,8 @@ body {
 
 #wrapper {
     .container {
-        width: $desktopWidth;
+        max-width: 100%;
+        width: 100%;
     
         @media (min-width: 1200px) {
             max-width: $desktopWidth;

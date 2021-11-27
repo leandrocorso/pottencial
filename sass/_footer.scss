@@ -47,11 +47,17 @@
     .footer-widgets-wrap {
         margin: unset;
         display: flex;
+        
+        @media screen and (max-width:1000px) {
+            display: block;
+        }
     }
+
     
     .col_one_fourth {
         margin: unset;
         width: unset;
+        border-top: none;
 
         &:first-child {
             flex-grow: 0;
@@ -61,6 +67,10 @@
         &:last-child {
             flex-grow: 1;
         }
+
+        @media screen and (max-width:1000px) {
+            width: 100%;
+        }
     }
 
 }
@@ -68,8 +78,16 @@
 .social-wrapper {
     width: 171px;
 
+    @media screen and (max-width:1000px) {
+        margin-bottom: 30px;
+    }
+
     .brand {
         margin-bottom: 65px;
+
+        @media screen and (max-width:1000px) {
+            margin-bottom: 30px;
+        }
     }
 
     .social {
@@ -105,6 +123,16 @@
                 font-weight: 700;
                 text-transform: uppercase;
             }
+        }
+
+        @media screen and (max-width:800px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            row-gap: 30px;
+        }
+        
+        @media screen and (max-width:800px) {
+            grid-template-columns: 1fr;
         }
     }
 

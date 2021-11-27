@@ -106,5 +106,13 @@
                 border: 0;
             }
         }
+
+        .select-menu {
+            margin: 0
+        }
+
+        @media screen and (max-width: 767px) {
+            margin: -10px 0 0 0;
+        }
     }
 }

@@ -55,6 +55,13 @@
                 background-color: $primary;
                 margin: 0 auto;
             }
+
+            @media screen and (max-width: 500px) {
+                line-height: 1;
+                &:after {
+                    margin: 20px auto 0 auto;
+                }
+            }
         }
 
         p {

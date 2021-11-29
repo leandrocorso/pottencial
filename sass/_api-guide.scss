@@ -14,10 +14,19 @@ body.node-type-documentation {
         .region-content {
             display: grid;
             grid-template-columns: 282px auto;
+
+            @media screen and (max-width:700px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
             
             .block-block:first-child {
                 background-color: $dark;
                 padding: 40px 25px 0 25px;
+
+                @media screen and (max-width:700px) {
+                    padding: 25px;
+                }
 
                 #side-menu-list {
         
@@ -71,11 +80,22 @@ body.node-type-documentation {
                         padding-bottom: 5px;
                         margin-left: 25px;
                     }
+
+                    @media screen and (max-width:700px) { 
+                        &.affix,
+                        &.affix-top {
+                            position: relative;
+                        }
+                    }
                 }
             }
 
             .node {
                 padding: 48px;
+
+                @media screen and (max-width: 500px) {
+                    padding: 25px;
+                }
 
                 .page-title {
                     font-family: $headingFontFamily;
@@ -97,7 +117,7 @@ body.node-type-documentation {
                     margin-bottom: 33px;
         
                     p {
-                        width: 680px;
+                        max-width: 680px;
                     }
         
                     .steps {
@@ -108,7 +128,12 @@ body.node-type-documentation {
         
                         img {
                             max-width: 533px;
+                            height: 100%;
                             margin-left: 12px;
+
+                            @media screen and (max-width:1200px){
+                                width: 60%;
+                            }
                         }
         
                         ul {
@@ -128,7 +153,7 @@ body.node-type-documentation {
                             }
         
                             li {
-                                width: 404px;
+                                max-width: 404px;
                                 font-size: 15px;
                                 font-family: $defaultFontFamily;
                                 letter-spacing: 1.5px;
@@ -160,6 +185,19 @@ body.node-type-documentation {
                                     margin-bottom: 0;
                                     border-bottom: 0;
                                 }
+                            }
+                        }
+
+                        @media screen and (max-width: 1000px) {
+                            flex-direction: column;
+
+                            img {
+                                width: 100%;
+                                margin: 0 0 40px 0;
+                            }
+
+                            ul li {
+                                max-width: 100%;
                             }
                         }
                     }

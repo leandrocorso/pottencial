@@ -235,6 +235,9 @@ body.node-type-documentation {
                 .sidebar {
                     margin: 0;
                     width: 354px;
+                    max-width: 45%;
+                    border: 0;
+                    padding: 0;
         
                     &.right {
                         float: right;
@@ -250,8 +253,9 @@ body.node-type-documentation {
         
                     .postman {
                         &__logo {
-                            width: 209px;
+                            max-width: 209px;
                             margin-bottom: 23px;
+                            grid-area: postman_logo;
                         }
         
                         &__text {
@@ -259,6 +263,7 @@ body.node-type-documentation {
                             padding-bottom: 30px;
                             margin-bottom: 25px;
                             border-bottom: 1px solid $transparency;
+                            grid-area: postman_text;
         
                             p {
                                 font-size: 15px;
@@ -278,6 +283,7 @@ body.node-type-documentation {
                             align-items: center;
                             margin-left: 0;
                             margin-bottom: 0;
+                            grid-area: postman_action;
                             
                             li {
                                 display: flex;
@@ -304,8 +310,92 @@ body.node-type-documentation {
                                 margin-top: 12px;
                             }
                         }
+
+                        @media screen and (max-width:1000px) {
+                            .postman {
+                                &__logo {
+                                    width: 100%;
+                                }
+                            }
+
+                            .button {
+                                width: fit-content;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-width:1000px) {
+                        max-width: 100%;
+                        width: 100%;
+
+                        &.right {
+                            float: none;
+                            margin: 0;
+                        }
+
+                        .card {
+                            max-width: 100%;
+                            width: 100%;
+                            margin-bottom: 40px;
+                        }
+
+                        .postman {
+                            display: grid;
+                            grid-template-columns: 1fr 2fr; 
+                            grid-template-areas: 
+                                "postman_logo postman_action"
+                                "postman_text postman_action";
+                            row-gap: 20px;
+                            column-gap: 30px;
+                            
+                            &__logo {
+                                margin-left: auto;
+                                margin-right: auto;
+                                margin-bottom: 0;
+                            }
+
+                            &__text {
+                                margin: 0;
+                                padding: 0;
+                                border: 0;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-width:800px) {
+                        .postman {
+                            grid-template-columns: 1fr; 
+                            grid-template-areas: 
+                                "postman_logo"
+                                "postman_text"
+                                "postman_action";
+
+                            .button {
+                                width: 216px;
+                            }
+                        }
                     }
         
+                }
+
+                @media screen and (max-width:800) {
+                    white-space: break-spaces;
+                }
+
+                pre code {
+                    white-space: break-spaces;
+                }
+
+                .table {
+                    td {
+                        white-space: break-spaces;
+                    }
+
+                    @media screen and (max-width:1000px) {
+                        td, td * {
+                            line-break: anywhere;
+                        }
+                    }
                 }
 
             }

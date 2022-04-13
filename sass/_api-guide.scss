@@ -29,6 +29,12 @@ body.node-type-documentation {
                 }
 
                 #side-menu-list {
+
+                    max-width: 230px;
+
+                    @media screen and (max-width:700px) {
+                        max-width: calc(100vw - 70px);
+                    }
         
                     &.affix-top {
                         position: absolute;
@@ -57,7 +63,7 @@ body.node-type-documentation {
                         letter-spacing: 0.55px;
                         padding: 5px 0 10px 25px;
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         
                         &:before {
                             content: '';
@@ -65,6 +71,7 @@ body.node-type-documentation {
                             height: 15px;
                             position: absolute;
                             left: 0;
+                            top: 8px;
                             @include tile(15px);
                             filter: invert(64%) sepia(0%) saturate(0%) hue-rotate(218deg) brightness(97%) contrast(79%);
                         }
@@ -103,6 +110,7 @@ body.node-type-documentation {
                     font-size: 36px;
                     display: flex;
                     flex-direction: column;
+                    line-height: normal;
     
                     &:after {
                         content:'';
@@ -382,8 +390,12 @@ body.node-type-documentation {
                     white-space: break-spaces;
                 }
 
-                pre code {
-                    white-space: break-spaces;
+                pre {
+                    white-space: normal;
+
+                    code {
+                        white-space: break-spaces;
+                    }
                 }
 
                 .table {
